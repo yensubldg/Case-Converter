@@ -1,0 +1,49 @@
+<h2>Slicing</h2>
+<html>
+ <head></head>
+ <body>
+  <p>JavaScript provides many features for working with arrays. One of the things you can do with a sequence is retrieving some part<strong> </strong>of it, which implies getting elements by their indexes. You can do this with the <code class="language-javascript">slice()</code> method.</p> 
+  <h2>Getting sections of sequences</h2> 
+  <p>The <code class="language-javascript">slice()</code> method does not change the source array, but returns a copy of the array containing copies of the elements cut from the source array. Here is what its syntax looks like:</p> 
+  <pre><code class="language-javascript">arr.slice(begin, end);</code></pre> 
+  <p>As you can see, this method accepts two parameters:</p> 
+  <ul> 
+   <li><strong>begin </strong>– instead of this word, specify the index of the element that will be the beginning of the extracted array partition.</li> 
+   <li><strong>end </strong>– here, specify the index of the array element by which the extraction will end. This element will not be included in the copy of the array.</li> 
+  </ul> 
+  <p></p>
+  <div class="alert alert-primary">
+   Do not forget that indexing in the array starts from zero.
+  </div>
+  <p></p> 
+  <p>These parameters are optional. If they are not specified, <code class="language-javascript">slice()</code> will simply create a copy of the array you're working with:</p> 
+  <pre><code class="language-javascript">let sheep = ["Dolly", "Polly", "Molly"];
+
+console.log(sheep.slice()); // ["Dolly", "Polly", "Molly"];</code></pre> 
+  <p>If you do not specify the first parameter, the array will be copied from <code class="language-javascript">0</code> index. Similarly, if you do not specify the second one, all the elements after the index from which they started will be copied.</p> 
+  <p>If the first parameter is longer than the sequence length, an empty array will return:</p> 
+  <pre><code class="language-javascript">let nums = [1, 2, 3];
+ 
+console.log(nums.slice(10)); // []</code></pre> 
+  <p>Let's try to work with the two specified parameters:</p> 
+  <pre><code class="language-javascript">let planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+
+console.log(planets.slice(1, 4)); // ["Venus", "Earth", "Mars"]</code></pre> 
+  <h2>Negative index values</h2> 
+  <p>Indexes can also be <strong>negative. </strong>If you specify a negative index in the first parameter, it will shift the end of the sequence. Alternatively, it can be called negative offset. For example, <code class="language-javascript">slice(-4)</code> call will extract the last four elements of the sequence:</p> 
+  <pre><code class="language-javascript">let fibNums = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+ 
+console.log(fibNums.slice(-4)); // [5, 8, 13, 21]</code></pre> 
+  <p>You can specify the second index as negative: it will also mean a shift from the end of the sequence:</p> 
+  <pre><code class="language-javascript">let fibNums = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+ 
+console.log(fibNums.slice(3,-2)); // [2, 3, 5, 8]</code></pre> 
+  <h2>Strings</h2> 
+  <p>In JS, the <code class="language-javascript">slice()</code> method can also be applied to strings for finding substrings. The principle is similar to the interaction with arrays:</p> 
+  <pre><code class="language-javascript">let str = "lighthouses";
+
+console.log(str.slice(-6, -1)); // house</code></pre> 
+  <h2>Conclusion</h2> 
+  <p>With <code class="language-javascript">slice()</code>, you can get any part of an array or a string. Remember that indexes are optional in this method's syntax, so all of them have a default value. Also, keep it in mind that you can set them to negative if the situation asks for it.</p>
+ </body>
+</html>
