@@ -1,4 +1,7 @@
 node_modules/
 .idea/
+<<<<<<< HEAD
 course-remote-info.yaml
 course-info.yaml
+=======
+>>>>>>> 793e937ca16374d0d583597df216c162bb1eeb00
