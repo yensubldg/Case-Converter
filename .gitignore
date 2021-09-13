@@ -1,2 +1,4 @@
 node_modules/
-.ide/
+.idea/
+course-remote-info.yaml
+course-info.yaml
